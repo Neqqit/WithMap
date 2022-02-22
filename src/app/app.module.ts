@@ -7,6 +7,7 @@ import { MapComponent } from './map/map.component';
 import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
 
 
+
 const mapConfig: YaConfig = {
   apikey: '9e387b2c-464a-4c77-b4dc-34cd5f950664',
   lang: 'ru_RU',
@@ -15,13 +16,15 @@ const mapConfig: YaConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    MapComponent
+    MapComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     NgbModule,
     AngularYandexMapsModule.forRoot(mapConfig),
+
   ],
   providers: [],
   bootstrap: [AppComponent]
