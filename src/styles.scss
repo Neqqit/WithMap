@@ -2,13 +2,27 @@
 
 /* Importing Bootstrap SCSS file. */
 $grid-columns:24;
+@import '~bootstrap/scss/bootstrap';
 .header-img {
     margin-top: 15.87px;
     margin-bottom: 15.87px;
 }
-.menu {
-    background: #F5F5F5;
-    width: 100%;
-    height: 90vh;
+.container {
+    max-width: 100%;
 }
-@import '~bootstrap/scss/bootstrap';
+.menu {
+    padding-top: 42px;
+}
+.form-check-label {
+    font-family: SF UI Display;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 28px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
+.content {
+    background: #F5F5F5;
+}
+
