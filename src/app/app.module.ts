@@ -5,7 +5,7 @@ import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MapComponent } from './map/map.component';
 import { AngularYandexMapsModule, YaConfig } from 'angular8-yandex-maps';
-
+import { HttpClientModule } from '@angular/common/http';
 
 
 const mapConfig: YaConfig = {
@@ -24,6 +24,7 @@ const mapConfig: YaConfig = {
     AppRoutingModule,
     NgbModule,
     AngularYandexMapsModule.forRoot(mapConfig),
+    HttpClientModule,
 
   ],
   providers: [],

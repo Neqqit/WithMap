@@ -11,25 +11,34 @@
         <div class="col-6"></div>
         <div class="col mb-3">
             <label for="exampleInputName" class="form-label">Имя: </label>
-            <input type="name" class="form-control" id="exampleInputName1" >
+            <input type="name" class="form-control" id="exampleInputName1" #name >
           </div>
+    </div>
+    <div class="row">
+        <div class="col-6"></div>
+        <select class="col mb-2 form-select selecter" #region aria-label="Default select example">
+            <option selected>Выберите город</option>
+            <option value="Волжский">Волжский</option>
+            <option value="Волгоград">Волгоград</option>
+          </select>
+          <div class="col-6 md-4"></div>
     </div>
     <div class="row">
         <div class="col-6"></div>
         <div class="col mb-3">
             <label for="exampleInputAddress" class="form-label">Адресс:</label>
-            <input type="address" class="form-control" id="exampleInputAddress1">
+            <input type="address" class="form-control" id="exampleInputAddress1" #adress>
           </div>
     </div>
     <div class="row">
         <div class="col-6"></div>
         <div class="col mb-3">
             <label for="exampleInputPhoneNumber" class="form-label">Номер телефона:</label>
-            <input type="phone-number" class="form-control" id="exampleInputPhoneNumber1">
+            <input type="phone-number" class="form-control" id="exampleInputPhoneNumber1" #phone>
         </div>
     </div>
     <div class="row">
-        <button type="submit" class="btn btn-outline-warning col-8 col-sm-4">Принять</button>
+        <button type="submit" class="btn btn-outline-warning col-8 col-sm-4" (click)="SendForm(name.value, phone.value, adress.value, region.value )" >Принять</button>
     </div>
 </div>
 

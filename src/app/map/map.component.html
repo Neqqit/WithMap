@@ -43,8 +43,7 @@
       </div>
     </div>
     <div class="col order-1 col-md-19 content"><div class="map">
-      <ya-map [center]="[55.751952, 37.600739]" [zoom]="12">
-        <ya-placemark [geometry]="[55.751952, 37.600739]"></ya-placemark>
+      <ya-map (ready)="onMapReady($event)" [center]="[48.8176494, 44.7707294]" [zoom]="12">
       </ya-map>
     </div>
   </div>
