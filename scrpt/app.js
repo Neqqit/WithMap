@@ -71,7 +71,6 @@ app.post("/data", function(request, response) {
             let realUrl = encodeURI("https://geocode-maps.yandex.ru/1.x/?apikey=79922c6e-921f-489a-bf32-880d81740470&format=json&geocode="+rawBody.Region+"'"+rawBody.Adress+"'")
         httpGetAsync(realUrl, (data)=>{
             let DataAnswer = JSON.parse(data);
-            console.log(DataAnswer);
             if(DataAnswer.response.GeoObjectCollection){
                 const sql = "INSERT INTO seo (id_users,point) VALUES ('"+InsertId+"','"+DataAnswer.response.GeoObjectCollection.featureMember[0].GeoObject.Point.pos+"')";
                 con.query(sql, function(err, result, fields) {
